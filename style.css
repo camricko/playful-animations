@@ -6,12 +6,20 @@
   box-sizing: border-box;
 }
 
-
 @keyframes up { from {top: 100%;} to {top: 0%}}
 @keyframes side-to-side {from {margin-left: 0px} to {margin-left: calc(var(--max-bubble-width) - 50px)}}
 @keyframes bubble-flow {
   0% {
-    transform: translate(0, -150px)}
+    transform: translate(0, 250px)}
+  100% {
+    transform: translate(0, -250px)}
+  }
+@keyframes bubble-opacity {
+  0% {opacity: 20%}
+  40% {opacity: 100%}
+  70% {opacity: 100%}
+  100% {opacity: 0%}
+}
 
 
 .sections {
@@ -97,26 +105,37 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  top: 120%;
+  top: 100%;
+  left: -120px;
   /* removes object from DOM */
   position: fixed;
-  animation: 7s ease-in infinite up, 1s linear alternate infinite side-to-side;
+
+  /* ideal is 3s for every 150px traveled, so 50px/s, keep animation times same*/
+  animation: var(--animation-duration) linear infinite bubble-flow, var(--animation-duration) linear infinite bubble-opacity;
 }
 
-
 .s1 {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 }
 
 #b1 {
-  margin-left: 100px;
+  left: 100px;
+  border: 5px solid black;
 }
 
 #b2 {
-  margin-left: 400px;
+  left: 300px;
 }
 
 #b3 {
-  margin-left: 600px;
+  left: 600px;
+  --animation-duration: 5s;
+  top: 10%;
+
+}
+
+#b4 {
+  left: 800px;
+  --animation-duration: 2s;
 }
