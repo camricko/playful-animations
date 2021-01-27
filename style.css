@@ -2,6 +2,18 @@
   --bg-element-color: #82deff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+
+@keyframes up { from {top: 100%;} to {top: 0%}}
+@keyframes side-to-side {from {margin-left: 0px} to {margin-left: calc(var(--max-bubble-width) - 50px)}}
+@keyframes bubble-flow {
+  0% {
+    transform: translate(0, -150px)}
+
+
 .sections {
   /* display: block; */
   /* border: 2px solid rebeccapurple; */
@@ -70,17 +82,41 @@
 .bubbles {
   /* bubbles defines the visual object and moves it  */
   border: 5px solid var(--bg-element-color);
+  border-radius: 50%;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-
+  top: 120%;
+  /* removes object from DOM */
   position: fixed;
   animation: 7s ease-in infinite up, 1s linear alternate infinite side-to-side;
-  /* animation-name: up, side-to-side;
-  animation-duration: 7s, 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
 }
 
-@keyframes up { from {top: 100%;} to {top: 0%}}
-@keyframes side-to-side {from {margin-left: 0px} to {margin-left: calc(var(--max-bubble-width) - 50px)}}
+.bubbles2 {
+  /* bubbles defines the visual object and moves it  */
+  border: 5px solid var(--bg-element-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  top: 120%;
+  /* removes object from DOM */
+  position: fixed;
+  animation: 7s ease-in infinite up, 1s linear alternate infinite side-to-side;
+}
+
+
+.s1 {
+  width: 80px;
+  height: 80px;
+}
+
+#b1 {
+  margin-left: 100px;
+}
+
+#b2 {
+  margin-left: 400px;
+}
+
+#b3 {
+  margin-left: 600px;
+}
