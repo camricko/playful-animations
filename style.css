@@ -105,13 +105,15 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+
+.float * {
+  /* ideal is 3s for every 150px traveled, so 50px/s, keep animation times same*/
+  animation: var(--animation-duration) linear infinite bubble-flow, var(--animation-duration) linear infinite bubble-opacity;
   top: 100%;
   left: -120px;
   /* removes object from DOM */
   position: fixed;
-
-  /* ideal is 3s for every 150px traveled, so 50px/s, keep animation times same*/
-  animation: var(--animation-duration) linear infinite bubble-flow, var(--animation-duration) linear infinite bubble-opacity;
 }
 
 .s1 {
@@ -131,11 +133,26 @@
 #b3 {
   left: 600px;
   --animation-duration: 5s;
-  top: 10%;
+  /* top: 10%; */
 
 }
 
 #b4 {
   left: 800px;
   --animation-duration: 2s;
+}
+
+#b5 {
+  left: 1200px;
+  --animation-duration: 3s;
+}
+
+#b6 {
+  left: 200px;
+  --animation-duration: 3s;
+}
+
+#b7 {
+  left: 400px;
+  --animation-duration: 3s;
 }
