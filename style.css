@@ -87,6 +87,14 @@
   overflow: visible;
 }
 
+.bubbles-container div {
+  /* substitute for bubbles2 class */
+  border: 5px solid var(--bg-element-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
 .bubbles {
   /* bubbles defines the visual object and moves it  */
   border: 5px solid var(--bg-element-color);
@@ -114,6 +122,7 @@
   left: -120px;
   /* removes object from DOM */
   position: fixed;
+  z-index: -1;
 }
 
 .s1 {
@@ -122,37 +131,55 @@
 }
 
 #b1 {
-  left: 100px;
-  border: 5px solid black;
+  left: 150px;
+  top: 15%;
+  --animation-duration: 3s;
 }
 
 #b2 {
-  left: 300px;
+  left: 220px;
+  top: 80%;
+  --animation-duration: 3s;
 }
 
 #b3 {
-  left: 600px;
-  --animation-duration: 5s;
-  /* top: 10%; */
-
+  left: 400px;
+  top: 40%;
+  --animation-duration: 3s;
 }
 
 #b4 {
-  left: 800px;
-  --animation-duration: 2s;
+  left: 560px;
+  top: 90%;
+  --animation-duration: 3s;
 }
 
 #b5 {
-  left: 1200px;
+  left: 800px;
+  top: 70%;
   --animation-duration: 3s;
 }
 
 #b6 {
-  left: 200px;
+  left: 1000px;
+  top: 95%;
   --animation-duration: 3s;
 }
 
 #b7 {
-  left: 400px;
+  left: 1350px;
+  top: 55%;
+  --animation-duration: 3s;
+}
+
+#b8 {
+  left: 1500px;
+  top: 33%;
+  --animation-duration: 3s;
+}
+
+#b9 {
+  left: 1580px;
+  top: 75%;
   --animation-duration: 3s;
 }
